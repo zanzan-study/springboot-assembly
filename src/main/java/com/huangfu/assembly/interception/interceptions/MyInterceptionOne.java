@@ -34,6 +34,7 @@ public class MyInterceptionOne implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         log.warn("---------前置拦截器: 1-----------");
+        response.addHeader("huangfu","kexing");
         return true;
     }
 
