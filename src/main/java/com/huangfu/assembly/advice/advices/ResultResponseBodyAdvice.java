@@ -31,6 +31,8 @@ public class ResultResponseBodyAdvice implements ResponseBodyAdvice<Object> {
 
     /**
      * 结果集处理器
+     * org.springframework.http.converter.StringHttpMessageConverter#writeInternal(java.lang.String, org.springframework.http.HttpOutputMessage)
+     * String值必须经过一次json化  因为 这个处理器只接受String类型的参数
      *
      * @param body                  结果
      * @param returnType            控制器方法的返回类型
